@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+h1 {
+  font-size: 1.75rem;
+  font-weight: normal;
+  margin: 0;
+}
+h2 {
+  font-weight: normal;
+  font-size: 1.1rem;
+}
+header,
+footer {
+  background-repeat: no-repeat;
+  height: 50px;
+  background-color: #61dafb;
+
+  text-align: right;
+}
+header {
+  margin-bottom: 30px;
+}
+footer {
+  margin-top: 30px;
+}
+header a,
+footer a {
+  display: table;
+  background: #000;
+  padding: 0 10px;
+  color: #fff;
+  height: 50px;
+  line-height: 50px;
+  text-decoration: none;
+  float: right;
+  border-left: solid 1px #666;
+  font-size: 13px;
+}
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 5px;
+  margin-bottom: 50px;
+}
+.container .buttons {
+  margin-top: 10px;
+}
+.container .btn {
+  background: #303f53;
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 8px;
+  margin: 5px 0;
+  border-radius: 4px;
+  display: inline-block;
+  border: 0;
+  cursor: pointer;
+  margin: 0 2px;
+}
+.container .btn:hover {
+  background: #4c6583;
+}
+.btn-disabled {
+  background: #8197a8 !important;
+}
+.btn-disabled:hover {
+  background: #8197a8 !important;
+}
+/* 56.25%; */
+.v-parent {
+  width: 100%;
+  position: relative;
+  padding-top: 56.25%;
+  height: auto;
+  margin-top: 30px;
+}
+/* 44.7%;; */
+.v-parent2 {
+  width: 100%;
+  position: relative;
+  padding-top: 44.7%;
+  height: auto;
+  margin-top: 30px;
+}
+.v-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.desc {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  padding: 0 10px;
+  line-height: 1.5em;
+}
+.desc p {
+  margin: 2px 0;
+}
+.desc a {
+  color: #990000;
+}
+
+.break {
+  height: 10px;
+  display: block;
+}
+.vjs-100 {
+  width: 100%;
+  height: 100%;
+}
+.fname {
+  text-align: left;
+  font-weight: bold;
+}
+.snippet {
+  margin: 5px 0;
+  width: 100%;
+  font-size: 13px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+.snippet-header {
+  background: #000;
+  padding: 4px 10px;
+  color: #fff;
+  text-transform: uppercase;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+}
+.snippet pre {
+  word-break: break-all;
+  white-space: pre-wrap;
+  background: #f0f0f0;
+  line-height: 1.5em;
+  padding: 8px 20px;
+  text-align: left;
+  color: #000;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  border-bottom-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+}
+.snippet .shadow {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(transparent, white);
+  bottom: 0;
+}
+.red {
+  color: #cc0000;
+}
+.bline {
+  height: 1px;
+  background: #ccc;
+  margin: 15px 0 !important;
+}
+.curs {
+  font-size: 13px;
+  font-style: italic;
+}
+.stat {
+  margin: auto;
+  display: table;
+  min-width: 300px;
+  text-align: left;
+  margin-top: 10px;
+}
+.stat pre {
+  overflow-y: auto;
+  max-height: 100px;
+  padding: 9.5px;
+  padding-left: 20px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  background-color: #f5f5f5;
+  border: 1px solid#ccc;
+  font-family: monospace;
+  min-height: 160px;
+}
+.stat2 {
+  background: #f0f0f0;
+  display: table;
+  margin: 10px auto;
+  border: solid 1px #ccc;
+  padding: 10px;
+  font-size: 12px;
+  text-align: left;
+  line-height: 18px;
+}
